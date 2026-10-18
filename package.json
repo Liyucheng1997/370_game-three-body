@@ -1,0 +1,12 @@
+{
+  "name": "three-body-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "三体 VR 游戏 Three.js 复刻",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "three": "^0.169.0"
+  }
+}

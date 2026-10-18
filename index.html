@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三体 · 虚拟现实游戏</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "./node_modules/three/build/three.module.js",
+  "three/addons/": "./node_modules/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="app"></div>
+
+<div id="hud" class="hidden">
+  <div id="hud-tl">
+    <div id="civ"></div>
+    <div id="objective"></div>
+  </div>
+  <div id="hud-tr">
+    <div id="era"></div>
+    <div id="sunline"></div>
+    <div id="tempbox">
+      <div id="temp-label">地表温度</div>
+      <div id="temp-bar"><div id="temp-fill"></div></div>
+      <div id="temp-val"></div>
+    </div>
+    <div id="stat"></div>
+  </div>
+  <div id="terminal"></div>
+  <div id="gatepanel"></div>
+  <div id="subtitle"><div class="speaker"></div><div class="text"></div></div>
+  <div id="prompt"></div>
+  <div id="keys"></div>
+  <div id="marker"><div class="dia"></div><div class="mk-label"></div></div>
+  <div id="labels"></div>
+  <div id="crosshair"></div>
+  <div id="lockhint">点击画面锁定视角（或按住鼠标拖动） · Esc 释放</div>
+</div>
+
+<div id="card"><div class="t1"></div><div class="t2"></div></div>
+<div id="fade"></div>
+<div id="boot"></div>
+
+<div id="title-screen">
+  <div class="ts-inner">
+    <div class="ts-small">V 装具 · 全感知虚拟现实</div>
+    <h1>三体</h1>
+    <div class="ts-en">THREE&nbsp;·&nbsp;BODY</div>
+    <div class="ts-desc">这是一个拥有三颗太阳的世界。太阳的运行没有规律，<br>文明在恒纪元里生长，在乱纪元中毁灭。<br>你的任务：找出太阳运行的规律，让文明活下去。</div>
+    <div class="ts-id">登录 ID：<input id="pid" value="海人" maxlength="8" spellcheck="false"></div>
+    <div class="ts-btns">
+      <button data-start="plain"><span class="ch">第一章</span>乱纪元 · 脱水与浸泡</button>
+      <button data-start="qin"><span class="ch">第二章</span>秦始皇 · 人列计算机</button>
+    </div>
+    <div class="ts-opts">
+      <label><input type="checkbox" id="opt-voice" checked> 系统语音朗读台词</label>
+      <label><input type="checkbox" id="opt-hq" checked> 高画质</label>
+    </div>
+    <div class="ts-help">WASD 移动 · Shift 奔跑 · 鼠标 视角 · 空格 跳过对白 · 屏幕右下角有按键提示</div>
+  </div>
+</div>
+
+<div id="ending">
+  <div class="e1"></div>
+  <div class="e2"></div>
+  <div class="e3"></div>
+  <button id="relogin">重新登录</button>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
